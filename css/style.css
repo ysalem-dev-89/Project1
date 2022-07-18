@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: #575454d9;
+}
+
+img {
+  opacity: 0.6;
+}
+
+p {
+  color: #777;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  margin: 1.5rem 0;
+}
+
+.container {
+  margin: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 80%;
+  max-width: 1200px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+.btn {
+  color: inherit;
+  display: block;
+  width: fit-content;
+  padding: 1.5rem 3.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 30px;
+  border: 1px solid #222;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 2rem 0;
+}
+
+.section-header {
+  margin: 5rem auto;
+  width: 40rem;
+  max-width: 80%;
+  text-align: center;
+  position: relative;
+}
+
+.section-header .section-title {
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.section-header:after {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  width: 5rem;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+}
+
+/* Header */
+@media (max-width: 900px) {
+  header {
+    text-align: center;
+  }
+  .btn {
+    margin: 2rem auto;
+  }
+}
+
+.nav-collapse {
+  margin: 2rem 0 4rem auto;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  background-color: #777;
+  border-radius: 50%;
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4rem;
+  width: 90%;
+  margin: auto;
+}
+
+.intro-img {
+  width: 30rem;
+  height: 30rem;
+  max-width: 100%;
+  margin: auto;
+}
+
+.intro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 30rem;
+}
+
+/* Services */
+
+.services {
+  background-color: #eee;
+  text-align: center;
+}
+
+.services .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.services .icons {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services .icons:after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #575454d9;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.services .icons i {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid #777;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10rem;
+  background-color: #eee;
+  z-index: 2;
+}
+/* Posts */
+
+.post {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 5rem;
+}
+
+.post.left {
+  flex-direction: row-reverse;
+}
+
+.post .post-img,
+.post .post-text {
+  flex: 1;
+}
+
+.post .post-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.posts .text {
+  text-align: center;
+}
+
+.posts p.text + a.details {
+  margin: auto;
+}
+
+@media (max-width: 800px) {
+  .post,
+  .post.left {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/*  Note */
+
+.note {
+  padding: 10rem 0;
+  color: white;
+  background-image: url(../images/pikist.jpg);
+  position: relative;
+  filter: grayscale(0.5);
+}
+
+.note:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.1;
+}
+
+.note .desc {
+  color: white;
+}
+/* Contact */
+
+.contact .container {
+  display: flex;
+  gap: 3rem;
+}
+
+.contact .container > * {
+  flex: 1;
+}
+
+@media (max-width: 800px) {
+  .contact .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.contact .contact-text li {
+  display: inline-block;
+}
+
+.contact .contact-text li a {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid #575454d9;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 5rem;
+  text-align: center;
+  color: #575454d9;
+  margin-right: 1rem;
+}
+
+.contact .contact-text li a span {
+  text-indent: -999999px;
+  overflow: hidden;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.contact-form label {
+  text-indent: -999999px;
+  overflow: hidden;
+  display: block;
+}
+
+.contact-form .form-input {
+  width: 100%;
+  padding: 1rem;
+}
+
+.contact-form textarea {
+  height: 20rem;
+}
+/* Footer */
