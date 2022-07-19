@@ -19,10 +19,10 @@ img {
 }
 
 p {
-  color: #777;
+  color: #555;
   line-height: 1.6;
   font-size: 1.6rem;
-  margin: 1.5rem 0;
+  margin: 2.5rem 0;
 }
 
 .container {
@@ -66,10 +66,17 @@ h3 {
   font-size: 1.2rem;
   text-transform: uppercase;
   border-radius: 30px;
-  border: 1px solid #222;
+  border: 1px solid #777;
   background-color: transparent;
   cursor: pointer;
   margin: 2rem 0;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .btn {
+    width: 100%;
+  }
 }
 
 .section-header,
@@ -95,7 +102,7 @@ h3 {
   height: 1px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #222;
+  background-color: #777;
 }
 
 .paragraph-title {
@@ -113,7 +120,7 @@ h3 {
   header {
     text-align: center;
   }
-  .btn {
+  header .btn {
     margin: 2rem auto;
   }
 }
@@ -135,29 +142,31 @@ h3 {
   flex-wrap: wrap;
   align-items: center;
   gap: 4rem;
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 
 .intro-img {
-  width: 30rem;
-  height: 30rem;
   max-width: 100%;
   margin: auto;
 }
 
 .intro-img img {
-  width: 100%;
-  height: 100%;
+  width: 30rem;
+  height: 30rem;
   object-fit: cover;
   border-radius: 50%;
 }
 
 .intro-text {
   flex: 1;
-  min-width: 30rem;
+  min-width: 21rem;
 }
 
+.intro-text p {
+  font-size: 2.4rem;
+  font-weight: thin;
+}
 /* Services */
 
 .services {
@@ -174,7 +183,7 @@ h3 {
 }
 
 .services .icons {
-  width: 100%;
+  width: fit-content;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -184,7 +193,7 @@ h3 {
 .services .icons:after {
   content: "";
   height: 1px;
-  width: 100%;
+  width: calc(100% - 2rem);
   background-color: #575454d9;
   position: absolute;
   top: 50%;
@@ -220,7 +229,9 @@ h3 {
 .post.left {
   flex-direction: row-reverse;
 }
-
+.post .post-img {
+  min-width: 32rem;
+}
 .post .post-img,
 .post .post-text {
   flex: 1;
@@ -239,32 +250,39 @@ h3 {
   margin: auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .post,
   .post.left {
     flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
   }
 }
 /*  Note */
 
 .note {
-  padding: 10rem 0;
+  padding: 7rem 0;
   color: white;
   background-image: url(../images/pikist.jpg);
+  background-position: left center;
   position: relative;
   filter: grayscale(0.5);
+}
+
+.note .btn {
+  margin: 3rem auto;
+  color: white;
+  border: 2px solid white;
 }
 
 .note:after {
   content: "";
   position: absolute;
-  background-color: white;
   left: 0;
+  background-color: rgba(90, 88, 88, 0.6);
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0.1;
+  z-index: -1;
 }
 
 .note .desc {
@@ -272,19 +290,25 @@ h3 {
 }
 /* Contact */
 
+.contact {
+  background-color: #eee;
+}
+
 .contact .container {
   display: flex;
+  align-items: center;
   gap: 3rem;
 }
 
 .contact .container > * {
   flex: 1;
+  width: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .contact .container {
     flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
   }
 }
 
@@ -317,11 +341,11 @@ h3 {
   width: 100%;
   padding: 1rem;
   margin-bottom: 1rem;
-  border: 1px solid #777;
-  border-radius: 4px;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 10px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .contact-form .row .form-input {
     width: calc(50% - 0.7rem);
   }
@@ -335,3 +359,10 @@ h3 {
 }
 
 /* Footer */
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 2rem 0 4rem;
+}
